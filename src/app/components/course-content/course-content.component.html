@@ -2,9 +2,35 @@
   <h2>Course content</h2>
   <div class="collabsiples">
     <nz-collapse>
-      <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active" >
-        <div>
-          {{panel.content}}
+      <nz-collapse-panel class="parentPanel" *ngFor="let panel of initialSection"  [nzHeader]="panel.title" [nzActive]="panel.active" >
+        <div *ngFor="let item of panel.contents">
+          <div class="childPanelSection">
+            <div>
+          <nz-collapse-panel class="childPanel" [nzHeader]="item.contentName" [nzActive]="panel.active">
+            <p class="panelText">Welcome to this course! Let me introduce myself and explain what the course is about!</p>
+          </nz-collapse-panel>
+        </div>
+          <a href="#">Preview</a>
+          <span>{{item.contentTime.hours}}:{{item.contentTime.minutes}} minutes</span>
+        </div>
+        </div>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </div>
+  <button nz-button nzType="default" (click)="eventClicked()" *ngIf="!sectionClicked">{{this.restSection.length}} more sections</button>
+  <div class="collabsiples2" *ngIf="sectionClicked">
+    <nz-collapse>
+      <nz-collapse-panel class="parentPanel" *ngFor="let panel of restSection"  [nzHeader]="panel.title" [nzActive]="panel.active" >
+        <div *ngFor="let item of panel.contents">
+          <div class="childPanelSection">
+            <div>
+          <nz-collapse-panel class="childPanel" [nzHeader]="item.contentName" [nzActive]="panel.active">
+            <p class="panelText">Welcome to this course! Let me introduce myself and explain what the course is about!</p>
+          </nz-collapse-panel>
+        </div>
+          <a href="#">Preview</a>
+          <span>{{item.contentTime.hours}}:{{item.contentTime.minutes}} minutes</span>
+        </div>
         </div>
       </nz-collapse-panel>
     </nz-collapse>

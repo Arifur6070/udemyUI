@@ -1,3 +1,7 @@
+@import '../../../assets/basicScss/common';
+
+
+
 h2{
   font-weight: bold;
 }
@@ -6,4 +10,46 @@ h2{
   margin-top: 25px;
   margin-left: 330px;
   width: 700px;
+}
+
+.parentPanel{
+  background-color: $divBackgroundColor;
+  font-weight: 800;
+}
+
+.childPanelSection{
+  display: flex;
+  font-weight: 100;
+  background-color: white;
+
+
+  a{
+    color: $primaryLinkColor;
+    text-decoration: underline;
+  };
+  span{
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(102, 100, 100);
+    width: 200px;
+  };
+}
+
+.panelText{
+  text-decoration: none;
+}
+
+.childPanel{
+  color: $primaryLinkColor;
+
+};
+
+[nz-button]{
+  border: 2px solid $primaryLinkColor;
+  width: 100%;
+  color: $primaryLinkColor;
+  font-weight: bold;
+  height: 50px;
+  background-color: $divBackgroundColor;
+  margin-top: 20px;
 }

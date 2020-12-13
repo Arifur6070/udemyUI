@@ -1,4 +1,4 @@
-import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { Content } from './content.model';
 
 export class CourseContent{
   title:string;
