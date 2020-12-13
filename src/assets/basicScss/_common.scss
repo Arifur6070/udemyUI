@@ -1,0 +1,22 @@
+$primaryLinkColor: rgb(57, 173, 173);
+$textColor: white;
+$divBackgroundColor: rgb(236, 231, 231);
+$divBorderColor: rgb(196, 192, 192);
+$divHeadersColor: rgb(72, 75, 75);
+
+$font-weights: (
+  'reguler':100,
+  'medium':300,
+  'bold':800,
+);
+
+@mixin basicDivStyling {
+  background-color:$divBackgroundColor;
+  width: 700px;
+  margin-left: 330px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 0.5px solid $divBorderColor;
+}
+
+

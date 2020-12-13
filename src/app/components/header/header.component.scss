@@ -1,0 +1,105 @@
+@import '../../../assets/basicScss/common';
+
+@mixin searchStyling{
+  height: 45px;
+  border: 1px solid black;
+}
+
+@mixin buttonStyling{
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: $divHeadersColor;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: $primaryLinkColor;
+}
+/* nz-header {
+  background: rgb(219, 219, 219);
+  padding: 0;ss
+}
+
+.logo {
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.imageClass{
+  width: 120px;
+  height: 120px;
+  top: 0;
+} */
+
+
+.imageClass{
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+}
+.searchBar{
+
+  width: 950px;
+}
+.searchBarInput{
+  @include searchStyling;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 920px;
+  margin-top: 15px;
+}
+
+.searchIcon{
+  @include searchStyling;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.headerLinks{
+  margin-top: 10px;
+}
+
+.headerLinksImage{
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+
+[nz-button] {
+  @include buttonStyling;
+  border-color: $primaryLinkColor;
+  color: $primaryLinkColor;
+  border: 1x solid $primaryLinkColor;
+  font-weight: map-get($font-weights, bold );
+}
+
+.signUpButton{
+  @include buttonStyling;
+  background-color: $primaryLinkColor;
+  color: white;
+  width: 80px;
+  font-weight: map-get($font-weights, bold );
+  border-radius: 3px;
+  cursor: pointer;
+}

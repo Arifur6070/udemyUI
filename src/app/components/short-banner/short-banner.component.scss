@@ -1,0 +1,54 @@
+@import '../../../assets/basicScss/common';
+
+a{
+  color: $primaryLinkColor;
+}
+
+
+
+.learningGoals{
+  @include basicDivStyling;
+  height: 200px;
+}
+.learnings{
+  display: flex;
+  background-color: $divBackgroundColor;
+}
+
+.learningGoals h2{
+  font-weight: bold;
+  margin-left: 40px;
+  padding-top: 20px;
+}
+.boxingUl{
+  display: flex;
+}
+
+.boxingUl span{
+  margin-left: 10px;
+}
+
+
+.boxingUl i{
+  margin-top: 5px;
+}
+
+.businessDiv{
+  @include basicDivStyling;
+  display: flex;
+  height: 80px;
+}
+
+.businessDiv h3{
+  margin-top: 20px;
+  color: black;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.imageClass{
+  height: 35px;
+  width: 35px;
+  margin-top: 14px;
+  margin-left: 20px;
+}

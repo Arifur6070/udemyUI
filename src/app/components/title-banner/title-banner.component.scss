@@ -1,0 +1,99 @@
+@import '../../../assets/basicScss/common';
+
+@mixin navLinkEach {
+  color: $primaryLinkColor;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+
+h1{
+  color: $textColor;
+  font-weight: map-get($font-weights , bold );
+}
+h3{
+  color: $textColor;
+}
+.mainBody{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(51, 48, 48);
+
+}
+.bestSeller{
+  background-color: rgb(207, 189, 86);
+  width: 60px;
+  height: 50px;
+  font-size: 12px;
+  padding: 6px;
+  font-weight: map-get($font-weights, bold );
+  border-radius: 3px;
+
+}
+.ratingDiv{
+  width: 500px;
+  margin-left: 330px;
+}
+
+
+.instructor{
+  color: $textColor;
+
+}
+
+.instructor a{
+  color: $primaryLinkColor;
+}
+
+.topLinks{
+   width: 500px;
+   height: 50px;
+   text-align: center;
+   padding-top: 30px;
+   margin-left: 240px;
+}
+
+.instructorDiv{
+  margin-left: 330px;
+}
+
+.titleDiv{
+  margin-left: 330px;
+}
+.desDiv{
+  margin-left: 330px;
+  width: 600px;
+}
+.navLinkEach{
+  color: $primaryLinkColor;
+  font-size: 15px;
+
+}
+
+.navLinkEach2{
+  @include navLinkEach;
+
+}
+
+
+[nz-icon]{
+  color: $textColor;
+}
+
+[nz-button]{
+  margin-left: 10px;
+  margin-top: 5px;
+  border-color: $textColor;
+  color: $textColor;
+}
+.languages{
+  color: $textColor;
+}
+
+.languagesAll{
+  display: flex;
+}
+.languages a{
+  color: $textColor;
+  text-decoration: underline;
+}

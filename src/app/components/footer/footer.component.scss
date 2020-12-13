@@ -1,0 +1,93 @@
+@import '../../../assets/basicScss/common';
+
+@mixin sectionStyle {
+  display: inline-block;
+  height: 100%;
+}
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+h3{
+  font-weight: map-get($font-weights, bold );
+}
+
+a{
+  color: $primaryLinkColor;
+}
+
+.image{
+  margin-left: 30px;
+  height: 20px;
+}
+
+.upperSection{
+  width: 100%;
+  height: 10%;
+}
+
+.upperSection1{
+  @include sectionStyle;
+  width: 600px;
+  margin-right: 220px;
+}
+.upperSection2{
+  @include sectionStyle;
+  width: 800px;
+}
+
+.midSection{
+  display: flex;
+  height: 200px;
+  width: 99.98;
+
+}
+
+.ulDivOne{
+  text-align: start;
+}
+
+.ulDivTwo{
+  text-align: start;
+}
+
+.ulDivThree{
+  text-align: start;
+}
+
+.ulDivFour{
+  height: 100px;
+  width: 400px;
+  margin-left: 700px;
+
+}
+
+[nz-button]{
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: 200px;
+  height: 45px;
+  border-color: black;
+}
+
+.homeLink{
+  display: flex;
+}
+.copyrRight{
+  margin-left: 1400px;
+}
+.address{
+  margin-top: 40px;
+}
+.imageClass{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 40px;
+}

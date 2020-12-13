@@ -1,0 +1,42 @@
+<div class="mainBody">
+  <!-- <label class="linkHolder" for="developMent"></label> -->
+  <div class="linkHolders">
+    <div class="topLinks">
+    <a class="navLinkEach" href="#">{{this.courseSubject.category}}</a>
+    <span><i nz-icon nzType="right" nzTheme="outline"></i></span>
+    <a class="navLinkEach2" href="#">{{this.courseSubject.subCategory}}</a>
+    <span><i nz-icon nzType="right" nzTheme="outline"></i></span>
+    <a class="navLinkEach2" href="#">{{this.courseSubject.topic}}</a>
+  </div>
+  <div class="titleDiv">
+    <h1>{{this.courseSubject.courseTitle}}</h1>
+  </div>
+  <div class="desDiv">
+  <h3>{{this.courseSubject.courseTagline}}</h3>
+  </div>
+  <div class="ratingDiv">
+    <span class="bestSeller" *ngIf="this.courseSubject.bestSeller">Bestseller</span>
+    <nz-rate class="star" [(ngModel)]="this.courseSubject.rating"></nz-rate>
+  </div>
+  <div class="instructorDiv">
+  <span class="instructor">Created by <a href="#">{{this.courseSubject.creator}}</a></span>
+  <br>
+
+  <span class="instructor"><i nz-icon nzType="info-circle" nzTheme="outline"></i> Last updated {{this.courseSubject.lastUpdated}}</span>
+  <span class="instructor"> <i nz-icon nzType="import" nzTheme="outline"></i>  English</span>
+  <i nz-icon nzType="ci" nzTheme="outline"></i> <span class="languages" *ngIf="!laguageClicked"> {{this.courseSubject.languages[0]}} [Auto], {{this.courseSubject.languages[1]}} <a href="#" (click)="anchorClicked()" *ngIf="this.courseSubject.languages.length>2">{{this.courseSubject.languages.length-2}} more</a></span>
+  <div class="languages" *ngIf="laguageClicked">
+    <div class="languagesAll"  *ngFor="let item of this.courseSubject.languages">
+       <div>{{item}}</div>
+    </div>
+  </div>
+  <div class="lowerSection">
+    <button nz-button nzType="primary" nzGhost>Wishlist <i class="fas fa-heart"></i></button>
+    <button nz-button nzType="primary" nzGhost>Share <i nz-icon nzType="share-alt" nzTheme="outline"></i></button>
+    <button nz-button nzType="primary" nzGhost>Gift This Course </button>
+  </div>
+
+  </div>
+</div>
+</div>
+

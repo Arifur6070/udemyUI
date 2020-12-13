@@ -1,0 +1,13 @@
+<div class="courseContentSection">
+  <h2>Course content</h2>
+  <div class="collabsiples">
+    <nz-collapse>
+      <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active" >
+        <div>
+          {{panel.content}}
+        </div>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </div>
+</div>
+
