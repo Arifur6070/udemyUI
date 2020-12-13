@@ -23,6 +23,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { RequirementComponent } from './components/requirement/requirement.component';
+import { DescriptionComponent } from './components/description/description.component';
 
 
 registerLocaleData(en);
@@ -34,7 +36,9 @@ registerLocaleData(en);
     HeaderComponent,
     TitleBannerComponent,
     ShortBannerComponent,
-    CourseContentComponent
+    CourseContentComponent,
+    RequirementComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

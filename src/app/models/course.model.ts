@@ -1,3 +1,5 @@
+import { Description } from './description/description.model';
+
 export class Course {
 
    courseTitle: string;
@@ -10,7 +12,9 @@ export class Course {
    category: string;
    subCategory:string;
    topic:string;
+   requirements:string[];
    learningGoals:string[];
+   description:Description;
 
   constructor(
     courseTitle: string,
@@ -23,7 +27,9 @@ export class Course {
     category: string,
     subCategory:string,
     topic:string,
-    learningGoals:string[]
+    learningGoals:string[],
+    requirements:string[],
+    description:Description
   ){
     this.courseTitle=courseTitle;
     this.courseTagline=courseTagline;
@@ -35,7 +41,9 @@ export class Course {
     this.category=category;
     this.subCategory=subCategory;
     this.topic=topic;
-     this.learningGoals=learningGoals;
-  }
+    this.learningGoals=learningGoals;
+    this.requirements=requirements;
+    this.description=description;
+}
 
 }

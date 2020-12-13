@@ -1,0 +1,38 @@
+
+<div class="courseDescription">
+  <h2>Description</h2>
+  <div class="descriptionText">
+  {{this.course.description.descriptionText | slice:this.course.description.start:this.course.description.end}}
+  <div *ngIf="this.course.description.descriptionText.length >= this.course.description.defaultNumber">
+    <span class="iconContainer" *ngIf="!this.clicked" (click)="onExpandText($event)">See More <i nz-icon nzType="down" nzTheme="outline"></i></span>
+    <span class="iconContainer" *ngIf="this.clicked" (click)="onShrinkingText($event)">See Less <i nz-icon nzType="up" nzTheme="outline"></i></span>
+  </div>
+
+
+  <!-- <div class="iconContainer" *ngIf="this.course.description.descriptionText.length <= this.course.description.defaultNumber">
+
+  </div> -->
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="this.course.description.descriptionText.length >= this.course.description.defaultNumber">
+  <span class="iconContainer" (click)="onExpandText($event)">See More <i nz-icon nzType="down" nzTheme="outline"></i></span>
+</div>
+<div class="iconContainer" *ngIf="this.course.description.descriptionText.length <= this.course.description.defaultNumber">
+  <span (click)="onShrinkingText($event)">See Less <i nz-icon nzType="up" nzTheme="outline"></i></span>
+</div> -->

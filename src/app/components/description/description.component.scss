@@ -1,0 +1,23 @@
+@import '../../../assets/basicScss/common';
+
+.courseDescription{
+  @include basicDivStyling2;
+}
+
+
+h2{
+  font-weight: bold;
+}
+
+.descriptionText{
+  margin-top: 15px;
+}
+
+
+.iconContainer{
+  color: $primaryLinkColor;
+  font-weight: map-get($font-weights, medium );
+  i{
+    color: $primaryLinkColor;
+  };
+}
